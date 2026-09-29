@@ -72,11 +72,41 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px}
 @media(max-width:1024px){.thick{grid-template-columns:1fr 1fr}.perks{grid-template-columns:1fr 1fr}}
 @media(max-width:820px){.hero .wrap,.problem .wrap{grid-template-columns:1fr}.problem{margin:0 12px}.grid{grid-template-columns:1fr 1fr}.steps{grid-template-columns:1fr}.final{margin:0 12px}}
 @media(max-width:560px){.grid{grid-template-columns:1fr}.hero-img .sticker{left:8px}}
+
+/* cart */
+.cart-btn{position:relative;gap:.4em}.cart-btn .cnt{background:#fff;color:var(--pink-d);border-radius:999px;min-width:22px;height:22px;padding:0 6px;display:inline-grid;place-items:center;font-size:12px;font-weight:800}
+.cart-btn .cnt.bump{animation:bump .25s}@keyframes bump{50%{transform:scale(1.35)}}
+.ov{position:fixed;inset:0;background:rgba(59,26,51,.45);opacity:0;pointer-events:none;transition:opacity .25s;z-index:80}.ov.open{opacity:1;pointer-events:auto}
+.drawer{position:fixed;top:0;right:0;bottom:0;width:min(440px,100vw);background:var(--blush);z-index:85;transform:translateX(100%);transition:transform .3s;display:flex;flex-direction:column;box-shadow:-20px 0 50px -20px rgba(59,26,51,.4)}.drawer.open{transform:none}
+.dh{display:flex;justify-content:space-between;align-items:center;padding:18px 22px;border-bottom:1.5px solid var(--line);background:#fff}.dh b{font-family:"Fredoka";font-size:22px}
+.dh button{border:0;background:var(--soft);width:36px;height:36px;border-radius:50%;font-size:22px;line-height:1;color:var(--plum)}
+.dbody{flex:1;overflow:auto;padding:18px 22px 26px}
+.dempty{text-align:center;padding:50px 10px;color:var(--plum-2)}.dempty .btn{margin-top:18px}
+.cl{display:grid;grid-template-columns:1fr auto;gap:6px 12px;background:#fff;border:1.5px solid var(--line);border-radius:18px;padding:14px;margin-bottom:12px}
+.cl b{font-family:"Fredoka";font-size:16px}.cl .v{font-size:13px;color:var(--plum-2)}.cl .v div{margin-top:2px}
+.cl .lp{font-weight:800;color:var(--pink-d);white-space:nowrap;text-align:right}.cl .lp small{display:block;font-weight:700;color:#4c7a45;font-size:11px}
+.qty{display:inline-flex;align-items:center;border:1.5px solid var(--line);border-radius:999px;overflow:hidden;background:#fff}
+.qty button{border:0;background:transparent;width:32px;height:32px;font-size:18px;color:var(--plum)}.qty span{min-width:26px;text-align:center;font-weight:800;font-size:14px}
+.rm{border:0;background:none;color:var(--plum-2);font-size:12px;text-decoration:underline;justify-self:end}
+.dtot{display:flex;justify-content:space-between;font-family:"Fredoka";font-size:20px;margin:18px 0 6px}.dtot span:last-child{color:var(--pink-d)}
+.dnote{font-size:13px;color:var(--plum-2);margin:6px 0 14px}
+.help{font-size:12.5px;color:var(--plum-2);margin-top:14px;text-align:center}.help a{color:var(--pink-d);font-weight:800;text-decoration:underline}
+.dbody .btn{width:100%}
+.fld{display:block;margin-bottom:12px}.fld span{display:block;font-size:13px;font-weight:800;margin-bottom:5px}
+.fld input,.fld textarea{width:100%;padding:12px 14px;border-radius:14px;border:2px solid var(--line);font:inherit;background:#fff;color:var(--plum)}.fld input:focus,.fld textarea:focus{outline:0;border-color:var(--pink)}
+.pay{display:flex;gap:10px;align-items:center;background:var(--soft);border:2px solid var(--pink);border-radius:14px;padding:12px 14px;font-weight:700;font-size:14px;margin-bottom:12px}.pay input{accent-color:var(--pink)}
+.back{border:0;background:none;color:var(--plum-2);font-weight:700;margin-bottom:12px;font-size:14px}
+.done{text-align:center}.done .big{font-size:52px}.done h2{font-size:28px;margin:8px 0 6px}.done .ono{display:inline-block;background:var(--soft);color:var(--pink-d);font-weight:800;border-radius:999px;padding:6px 14px;margin:8px 0 16px;font-size:14px}
+.done .box{text-align:left;background:#fff;border:1.5px solid var(--line);border-radius:18px;padding:14px;font-size:14px;margin:14px 0}.done .box div{margin:3px 0}
+.mini{display:flex;justify-content:space-between;gap:10px;font-size:13px;margin:3px 0}
+.toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,30px);opacity:0;background:var(--plum);color:#fff;padding:14px 20px;border-radius:16px;font-weight:700;font-size:14px;transition:.3s;z-index:95;max-width:90vw;pointer-events:none}.toast.show{opacity:1;transform:translate(-50%,0)}
+
+.card .cbuy{padding:0 20px 20px;display:grid;gap:8px}.card .cbuy select,.card .cbuy input{width:100%;padding:10px 12px;border-radius:12px;border:2px solid var(--line);font:inherit;font-size:14px;background:#fff;color:var(--plum)}.card .cbuy .btn{padding:11px 18px;font-size:14px}
 </style></head><body>
 <div class="announce">Ručno rađeno · šije se po meri vašeg mališana 🌙</div>
 <header class="site"><div class="wrap"><a class="logo" href="index.html"><img src="img/logo.jpg" alt="Dreamy Handmades logo">dreamy handmades</a>
 <nav class="main"><a href="vreca-za-spavanje.html">Vreće za spavanje</a><a href="index.html#ostalo">Za bebe i krevetac</a><a href="index.html#leto">Na plažu</a><a href="index.html#utisci">Utisci</a></nav>
-<a class="btn btn-pink hdr-cta" href="https://ig.me/m/dreamy_handmades_" target="_blank" rel="noopener">Pišite nam 💌</a></div></header>
+<button class="btn btn-pink hdr-cta cart-btn" id="cartBtn" type="button">Korpa <span class="cnt" id="cartCount">0</span></button></div></header>
 <main>
 <section class="hero"><div class="wrap">
  <div><span class="eyebrow">Ručno rađeno · po meri</span>
@@ -85,7 +115,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px}
  <div class="cta"><a class="btn btn-pink" href="vreca-za-spavanje.html">Izaberi vreću za spavanje</a><a class="btn btn-ghost" href="#ostalo">Ostala oprema</a></div></div>
  <div class="hero-img"><div class="main"><img src="img/bears.jpg" alt="Vreća za spavanje sa nogavicama i medvedima"></div><div class="sticker">7 debljina · 3 oblika</div></div>
 </div>
-<div class="wrap"><div class="perks"><div class="perk"><span>✂️</span>Šije se po meri</div><div class="perk"><span>🌿</span>Pamuk, muslin, vafl, frotir</div><div class="perk"><span>🎨</span>Dezen po vašoj želji</div><div class="perk"><span>💌</span>Narudžbina preko inboxa</div></div></div></section>
+<div class="wrap"><div class="perks"><div class="perk"><span>✂️</span>Šije se po meri</div><div class="perk"><span>🌿</span>Pamuk, muslin, vafl, frotir</div><div class="perk"><span>🎨</span>Dezen po vašoj želji</div><div class="perk"><span>📦</span>Plaćanje pouzećem</div></div></div></section>
 
 <section class="block"><div class="problem" style="padding:72px 0"><div class="wrap">
  <img src="img/flowers.jpg" alt="Vreća sa nogavicama i cvetnim dezenom">
@@ -108,30 +138,21 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px}
 
 <section class="block" id="ostalo" style="padding-top:0"><div class="wrap">
  <div class="sec-head"><span class="eyebrow">Za bebe i krevetac</span><h2>Ljubav na prvo <span class="script">ušuškavanje</span></h2></div>
- <div class="grid"><a class="card" href="https://ig.me/m/dreamy_handmades_" target="_blank" rel="noopener"><div class="media"><img src="img/ograda.jpg" alt="Ogradice za krevetac" loading="lazy"></div>
-<div class="body"><div><h3>Ogradice za krevetac</h3><small>trostrana ravna 60×120×60 cm · jastučasta 4.100</small></div><span class="price">3.700 RSD</span></div></a><a class="card" href="https://ig.me/m/dreamy_handmades_" target="_blank" rel="noopener"><div class="media"><img src="img/jastuk.jpg" alt="Jastuk, ćebence i pelene" loading="lazy"></div>
-<div class="body"><div><h3>Jastuci, pelene i ćebad</h3><small>ravan jastuk 650 · pelena 75×75 500 · krzneno ćebence od 2.100</small></div><span class="price">od 400 RSD</span></div></a><a class="card" href="https://ig.me/m/dreamy_handmades_" target="_blank" rel="noopener"><div class="media"><img src="img/dunjica.jpg" alt="Dunjica za bebe" loading="lazy"></div>
-<div class="body"><div><h3>Dunjica</h3><small>oko 80 cm · do petog, šestog meseca</small></div><span class="price">3.500 RSD</span></div></a><a class="card" href="https://ig.me/m/dreamy_handmades_" target="_blank" rel="noopener"><div class="media"><img src="img/portikle.jpg" alt="Portikle i brisalice od muslina" loading="lazy"></div>
-<div class="body"><div><h3>Portikle i brisalice</h3><small>set od tri nepromočive portikle 1.100</small></div><span class="price">od 150 RSD</span></div></a><a class="card" href="https://ig.me/m/dreamy_handmades_" target="_blank" rel="noopener"><div class="media"><img src="img/mantil.jpg" alt="Bade mantilić sa vezenim amblemom" loading="lazy"></div>
-<div class="body"><div><h3>Bade mantilići</h3><small>vezeni amblemi, 100% pamuk</small></div><span class="price">od 3.000 RSD</span></div></a><a class="card" href="https://ig.me/m/dreamy_handmades_" target="_blank" rel="noopener"><div class="media"><img src="img/podloga.jpg" alt="Nepromočive podloge za presvlačenje" loading="lazy"></div>
-<div class="body"><div><h3>Nepromočiva podloga</h3><small>za presvlačenje 50×70 cm</small></div><span class="price">900 RSD</span></div></a></div>
- <p class="tab-note">Cene sa profila brenda. Peškiri (80×80 – 1.750 RSD, 100×100 – 2.200 RSD), pelene i brisalice: na pet naručenih, šesta je gratis. 🎁</p>
+ <div class="grid" id="gridOstalo"></div>
+ <p class="tab-note">Pelene i brisalice: na pet naručenih, šesta je gratis, a popust se sam obračunava u korpi. 🎁</p>
 </div></section>
 
 <section class="block" id="leto" style="padding-top:0"><div class="wrap">
  <div class="sec-head"><span class="eyebrow">Za vruće dane</span><h2>Na plažu <span class="script">i u letnje noći</span></h2></div>
- <div class="grid"><a class="card" href="https://ig.me/m/dreamy_handmades_" target="_blank" rel="noopener"><div class="media"><img src="img/poncho.jpg" alt="Pončo od muslina" loading="lazy"></div>
-<div class="body"><div><h3>Pončo za plažu</h3><small>muslin, gaza ili vafl · i za mame</small></div><span class="price">od 1.500 RSD</span></div></a><a class="card" href="https://ig.me/m/dreamy_handmades_" target="_blank" rel="noopener"><div class="media"><img src="img/romper.jpg" alt="Letnji romperi od gaze" loading="lazy"></div>
-<div class="body"><div><h3>Romperi</h3><small>dvoslojna gaza · 9–36 meseci</small></div><span class="price">1.900 RSD</span></div></a><a class="card" href="vreca-za-spavanje.html"><div class="media"><img src="img/clouds.jpg" alt="Letnja muslin vreća" loading="lazy"></div>
-<div class="body"><div><h3>Letnje muslin vreće</h3><small>jedan sloj organskog muslina</small></div><span class="price">po meri</span></div></a></div>
+ <div class="grid" id="gridLeto"></div>
 </div></section>
 
 <section class="block" style="padding-top:0"><div class="wrap">
- <div class="sec-head"><span class="eyebrow">Kako se poručuje</span><h2>Tri poruke i vreća <span class="script">kreće da se šije</span></h2></div>
+ <div class="sec-head"><span class="eyebrow">Kako se poručuje</span><h2>Tri koraka i vreća <span class="script">kreće da se šije</span></h2></div>
  <div class="steps">
   <div class="step"><div class="n">1</div><b>Model i debljina</b><p>Džak ili sa nogavicama, sa rukavima ili bez, i debljina prema temperaturi sobe.</p></div>
-  <div class="step"><div class="n">2</div><b>Mera deteta</b><p>Premerite dete baš od ramena do stopala. Vreće se ne šiju u standardnim veličinama.</p></div>
-  <div class="step"><div class="n">3</div><b>Dezen i cena</b><p>Izaberite dezen, a tačnu cenu dobijate u odgovoru, jer zavisi od modela, debljine i dužine.</p></div>
+  <div class="step"><div class="n">2</div><b>Mera i dezen</b><p>Upišite visinu deteta od ramena do stopala i dezen koji želite. Vreće se ne šiju u standardnim veličinama.</p></div>
+  <div class="step"><div class="n">3</div><b>Korpa i porudžbina</b><p>Dodajte u korpu, ostavite podatke za isporuku i plaćate pouzećem.</p></div>
  </div></div></section>
 
 <section class="block" id="utisci" style="padding-top:0"><div class="wrap">
@@ -139,9 +160,119 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px}
  <div class="revs"><div class="rev"><p>„Ništa lepše, kvalitetnije nisam skoro videla. Od materijala, kroja, dezena. Zaista sve pohvale, vidi se da je rađeno s ljubavlju. Od mene imate sve preporuke!“</p><b>Mama, iz highlighta „Utisci“</b></div><div class="rev"><p>„Samo da javim da je vreća stigla i da je prelepa! Znala sam da ćete je lepo sašiti jer već imamo jednu vašu, ali ovaj pamuk je još lepši, posebno sam oduševljena mekim pamukom iznutra. Dezen je priča za sebe, prelep!“</p><b>Mama, iz highlighta „Utisci“</b></div><div class="rev"><p>„Ne budim se da proveravam da li joj je cebence preko glave, ili da li se je otkrila skroz pa da joj bude hladno. Ovako najjednostavnije, ali i najjudobnije. … Materijal fenomenalan.“</p><b>Mama, iz highlighta „Utisci“</b></div><div class="rev"><p>„Hvala. Predivni su dzakovi. Svako dobro“</p><b>Mama, iz highlighta „Utisci“</b></div></div>
 </div></section>
 
-<section class="final"><h2>Pišite nam u inbox 💌</h2><p>Zajedno ćemo naći pravu vreću za vaše mališane.</p><a class="btn btn-pink" href="https://ig.me/m/dreamy_handmades_" target="_blank" rel="noopener">Pošalji poruku na Instagramu</a></section>
+<section class="final"><h2>Spremni za miran san? 🌙</h2><p>Izaberite vreću po meri vašeg mališana i dodajte je u korpu.</p><a class="btn btn-pink" href="vreca-za-spavanje.html">Izaberi vreću za spavanje</a></section>
 </main>
 <footer><div class="wrap"><div><b style="color:#fff;font-family:Fredoka">dreamy handmades</b><br>Kod nas ćete pronaći miran san 👶🏻</div>
 <div><a href="https://www.instagram.com/dreamy_handmades_/" target="_blank" rel="noopener">Instagram @dreamy_handmades_</a></div>
-<p class="mock">Nezvanični mockup prodavnice, napravljen na osnovu Instagram profila brenda. Cene i opisi potiču sa profila.</p></div></footer>
+<p class="mock">Nezvanični mockup prodavnice, napravljen na osnovu Instagram profila brenda. Cene i opisi potiču sa profila; cene vreća za spavanje su okvirne (procena).</p></div></footer>
+<div class="ov" id="ov"></div>
+<aside class="drawer" id="drawer" aria-hidden="true" role="dialog" aria-label="Korpa"><div class="dh"><b id="dTitle">Korpa</b><button id="dClose" type="button" aria-label="Zatvori">×</button></div><div class="dbody" id="dBody"></div></aside>
+<div class="toast" id="toast"></div>
+<script>
+(function(){
+var KEY='dh_cart_v1',IG='https://www.instagram.com/dreamy_handmades_/',cart=[],view='cart';
+try{cart=JSON.parse(localStorage.getItem(KEY)||'[]')}catch(e){cart=[]}
+if(!Array.isArray(cart))cart=[];
+function save(){try{localStorage.setItem(KEY,JSON.stringify(cart))}catch(e){}}
+function fmt(n){return String(Math.round(n)).replace(/\B(?=(\d{3})+(?!\d))/g,'.')+' RSD'}
+function el(t,c,x){var e=document.createElement(t);if(c)e.className=c;if(x!=null)e.textContent=x;return e}
+function freeOf(l){return l.bulk?Math.floor(l.qty/6):0}
+function lineTotal(l){return l.price*(l.qty-freeOf(l))}
+function total(){return cart.reduce(function(s,l){return s+lineTotal(l)},0)}
+function count(){return cart.reduce(function(s,l){return s+l.qty},0)}
+var drawer=document.getElementById('drawer'),ov=document.getElementById('ov'),body=document.getElementById('dBody'),title=document.getElementById('dTitle'),cnt=document.getElementById('cartCount');
+function toast(m){var t=document.getElementById('toast');t.textContent=m;t.classList.add('show');setTimeout(function(){t.classList.remove('show')},3000)}
+function badge(bump){cnt.textContent=count();if(bump){cnt.classList.remove('bump');void cnt.offsetWidth;cnt.classList.add('bump')}}
+function open(v){view=v||'cart';drawer.classList.add('open');ov.classList.add('open');drawer.setAttribute('aria-hidden','false');render()}
+function close(){drawer.classList.remove('open');ov.classList.remove('open');drawer.setAttribute('aria-hidden','true')}
+function helpNote(){var p=el('p','help','Pitanja? Pišite nam na Instagramu ');var a=el('a',null,'@dreamy_handmades_');a.href=IG;a.target='_blank';a.rel='noopener';p.appendChild(a);return p}
+function render(){
+ body.innerHTML='';badge(false);
+ if(view==='cart')renderCart();else if(view==='checkout')renderCheckout();
+}
+function renderCart(){
+ title.textContent='Korpa';
+ if(!cart.length){var e=el('div','dempty');e.appendChild(el('div',null,'Korpa je prazna. Izaberite nešto lepo za mališane.'));var b=el('button','btn btn-pink','Nastavi kupovinu');b.type='button';b.onclick=close;e.appendChild(b);body.appendChild(e);body.appendChild(helpNote());return}
+ cart.forEach(function(l,i){
+  var d=el('div','cl'),left=el('div');left.appendChild(el('b',null,l.name));
+  var v=el('div','v');if(l.variant)v.appendChild(el('div',null,l.variant));(l.opts||[]).forEach(function(o){v.appendChild(el('div',null,o))});if(l.note)v.appendChild(el('div',null,'Napomena: '+l.note));
+  left.appendChild(v);d.appendChild(left);
+  var lp=el('div','lp',fmt(lineTotal(l)));if(freeOf(l))lp.appendChild(el('small',null,'šesta gratis: '+freeOf(l)+' kom'));d.appendChild(lp);
+  var q=el('div','qty'),m=el('button',null,'−'),p=el('button',null,'+');m.type=p.type='button';m.setAttribute('aria-label','Manje');p.setAttribute('aria-label','Više');
+  m.onclick=function(){l.qty--;if(l.qty<1)cart.splice(i,1);save();render()};p.onclick=function(){l.qty++;save();render()};
+  q.appendChild(m);q.appendChild(el('span',null,l.qty));q.appendChild(p);d.appendChild(q);
+  var r=el('button','rm','Ukloni');r.type='button';r.onclick=function(){cart.splice(i,1);save();render()};d.appendChild(r);
+  body.appendChild(d)});
+ var t=el('div','dtot');t.appendChild(el('span',null,'Ukupno'));t.appendChild(el('span',null,fmt(total())));body.appendChild(t);
+ body.appendChild(el('p','dnote','Plaćanje pouzećem, prilikom preuzimanja pošiljke.'));
+ var go=el('button','btn btn-pink','Nastavi na porudžbinu');go.type='button';go.onclick=function(){view='checkout';render()};body.appendChild(go);
+ var more=el('button','btn btn-ghost','Nastavi kupovinu');more.type='button';more.style.marginTop='10px';more.onclick=close;body.appendChild(more);
+ body.appendChild(helpNote());
+}
+function renderCheckout(){
+ title.textContent='Podaci za porudžbinu';
+ var bk=el('button','back','← Nazad u korpu');bk.type='button';bk.onclick=function(){view='cart';render()};body.appendChild(bk);
+ var f=document.createElement('form');
+ f.innerHTML='<label class="fld"><span>Ime i prezime</span><input name="ime" required autocomplete="name"></label>'
+ +'<label class="fld"><span>Adresa (ulica i broj)</span><input name="adresa" required autocomplete="street-address"></label>'
+ +'<label class="fld"><span>Grad i poštanski broj</span><input name="grad" required autocomplete="address-level2"></label>'
+ +'<label class="fld"><span>Telefon</span><input name="tel" type="tel" required autocomplete="tel" pattern="[0-9+ /()-]{6,}"></label>'
+ +'<label class="fld"><span>E-mail</span><input name="mail" type="email" required autocomplete="email"></label>'
+ +'<label class="fld"><span>Napomena / personalizacija (opciono)</span><textarea name="nap" rows="3"></textarea></label>'
+ +'<div class="pay"><input type="radio" checked disabled> Plaćanje pouzećem</div>';
+ var sm=el('div');cart.forEach(function(l){var r=el('div','mini');r.appendChild(el('span',null,l.qty+' × '+l.name+(l.variant?' ('+l.variant+')':'')));r.appendChild(el('span',null,fmt(lineTotal(l))));sm.appendChild(r)});f.appendChild(sm);
+ var t=el('div','dtot');t.appendChild(el('span',null,'Ukupno'));t.appendChild(el('span',null,fmt(total())));f.appendChild(t);
+ var s=el('button','btn btn-pink','Potvrdi porudžbinu');s.type='submit';f.appendChild(s);f.appendChild(helpNote());
+ f.onsubmit=function(e){e.preventDefault();var fd=new FormData(f);
+  var o={no:'DH-'+Math.floor(1000+Math.random()*9000),items:cart.slice(),total:total(),ime:fd.get('ime'),adresa:fd.get('adresa'),grad:fd.get('grad'),tel:fd.get('tel'),mail:fd.get('mail')};
+  cart=[];save();badge(false);renderDone(o)};
+ body.appendChild(f);
+}
+function renderDone(o){
+ view='done';body.innerHTML='';title.textContent='Porudžbina';body.scrollTop=0;
+ var d=el('div','done');d.appendChild(el('div','big','💌'));d.appendChild(el('h2',null,'Hvala, porudžbina je primljena'));
+ d.appendChild(el('p',null,'Broj porudžbine:'));d.appendChild(el('div','ono',o.no));
+ var bx=el('div','box');o.items.forEach(function(l){var r=el('div',null,l.qty+' × '+l.name+(l.variant?' ('+l.variant+')':'')+((l.opts&&l.opts.length)?' · '+l.opts.join(', '):'')+(l.note?' · '+l.note:'')+' — '+fmt(lineTotal(l)));bx.appendChild(r)});
+ var tt=el('div',null,'Ukupno: '+fmt(o.total));tt.style.fontWeight='800';bx.appendChild(tt);
+ bx.appendChild(el('div',null,'Isporuka: '+o.ime+', '+o.adresa+', '+o.grad));bx.appendChild(el('div',null,'Kontakt: '+o.tel+' · '+o.mail));bx.appendChild(el('div',null,'Plaćanje pouzećem'));
+ d.appendChild(bx);d.appendChild(el('p','dnote','Javićemo vam se radi potvrde porudžbine i dogovora o isporuci.'));
+ var b=el('button','btn btn-pink','Nazad u prodavnicu');b.type='button';b.onclick=close;d.appendChild(b);d.appendChild(helpNote());body.appendChild(d);
+}
+window.DH={fmt:fmt,toast:toast,open:open,
+ add:function(it){var key=[it.id,it.variant||'',(it.opts||[]).join('|'),it.note||''].join('§');
+  var f=cart.filter(function(l){return l.key===key})[0];
+  if(f)f.qty+=it.qty||1;else cart.push({key:key,id:it.id,name:it.name,variant:it.variant||'',opts:it.opts||[],note:it.note||'',price:it.price,qty:it.qty||1,bulk:!!it.bulk});
+  save();badge(true);open('cart')}};
+document.getElementById('cartBtn').onclick=function(){open('cart')};
+document.getElementById('dClose').onclick=close;ov.onclick=close;
+document.addEventListener('keydown',function(e){if(e.key==='Escape')close()});
+badge(false);
+})();
+
+var P=[
+{g:'o',id:'ograda',img:'img/ograda.jpg',alt:'Ogradice za krevetac',name:'Ogradice za krevetac',small:'trostrana, 60×120×60 cm',ph:'Dezen ili napomena (opciono)',v:[['Trostrana ravna 60×120',3700],['Trostrana jastučasta',4100]]},
+{g:'o',id:'jastuk',img:'img/jastuk.jpg',alt:'Jastuk, ćebence i pelene',name:'Jastuci, pelene i ćebad',small:'izaberite model i veličinu',ph:'Dezen ili napomena (opciono)',v:[['Ravan jastuk 30×40',650],['Ravni jastuci 30×40, set od 3',1800],['Punjen jastuk 30×40',800],['Punjeni jastuci 30×40, set od 3',2250],['Pelena 50×70',400,1],['Pelena 75×75',500,1],['Pelena 75×100',700,1],['Minky ćebence 75×100',1900],['Minky ćebence 100×150',3000],['Minky ćebence 120×180',3900],['Krzneno ćebence 75×100',2100],['Krzneno ćebence 100×150',3300],['Krzneno ćebence 120×180',4200]]},
+{g:'o',id:'dunjica',img:'img/dunjica.jpg',alt:'Dunjica za bebe',name:'Dunjica',small:'oko 80 cm · do petog, šestog meseca',ph:'Dezen ili napomena (opciono)',v:[['Dunjica oko 80 cm',3500]]},
+{g:'o',id:'portikle',img:'img/portikle.jpg',alt:'Portikle i brisalice od muslina',name:'Portikle, brisalice i peškiri',small:'brisalice: na pet, šesta gratis',ph:'Dezen ili napomena (opciono)',v:[['Nepromočiva portikla',400],['Nepromočive portikle, set od 3',1100],['Brisalica',150,1],['Peškir 80×80',1750],['Peškir 100×100',2200]]},
+{g:'o',id:'mantil',img:'img/mantil.jpg',alt:'Bade mantilić sa vezenim amblemom',name:'Bade mantilići',small:'vezeni amblemi, 100% pamuk',ph:'Napomena (opciono)',v:[['Mantilić 1–4 god.',3000],['Mantilić 4–8 god.',3200]]},
+{g:'o',id:'podloga',img:'img/podloga.jpg',alt:'Nepromočive podloge za presvlačenje',name:'Nepromočiva podloga',small:'za presvlačenje 50×70 cm',ph:'Dezen ili napomena (opciono)',v:[['Podloga 50×70',900]]},
+{g:'l',id:'poncho',img:'img/poncho.jpg',alt:'Pončo od muslina',name:'Pončo za plažu',small:'muslin, gaza ili vafl · i za mame',ph:'Dezen ili napomena (opciono)',v:[['Muslin, deca 50 cm',1500],['Muslin, deca 55–60 cm',1600],['Muslin, deca 70 cm',1700],['Gaza dvoslojna, deca 50 cm',1800],['Gaza dvoslojna, deca 55–60 cm',1900],['Gaza dvoslojna, deca 70 cm',2000],['Gaza četvoroslojna, deca 50 cm',2100],['Gaza četvoroslojna, deca 55–60 cm',2200],['Gaza četvoroslojna, deca 70 cm',2300],['Vafl, deca 50 cm',2100],['Vafl, deca 55–60 cm',2200],['Vafl, deca 70 cm',2300],['Muslin, mame 80 cm',1800],['Muslin, mame 90 cm',1900],['Muslin, mame 100 cm',2000]]},
+{g:'l',id:'romper',img:'img/romper.jpg',alt:'Letnji romperi od gaze',name:'Romperi',small:'dvoslojna gaza · 9–36 meseci',ph:'Veličina (9–36 meseci) i dezen',v:[['Romper od dvoslojne gaze',1900]]}
+];
+P.forEach(function(p){
+ var c=document.createElement('div');c.className='card';
+ var opts=p.v.map(function(v,i){return '<option value="'+i+'">'+v[0]+' — '+DH.fmt(v[1])+'</option>'}).join('');
+ c.innerHTML='<div class="media"><img src="'+p.img+'" alt="'+p.alt+'" loading="lazy"></div><div class="body"><div><h3>'+p.name+'</h3><small>'+p.small+'</small></div><span class="price"></span></div><div class="cbuy">'+(p.v.length>1?'<select aria-label="Varijanta">'+opts+'</select>':'')+'<input type="text" maxlength="120" placeholder="'+p.ph+'" aria-label="Napomena"><button type="button" class="btn btn-pink">Dodaj u korpu</button></div>';
+ var sel=c.querySelector('select'),pr=c.querySelector('.price'),inp=c.querySelector('input');
+ function cur(){return p.v[sel?+sel.value:0]}
+ function upd(){pr.textContent=DH.fmt(cur()[1])}
+ if(sel)sel.onchange=upd;
+ upd();
+ c.querySelector('button').onclick=function(){var v=cur();DH.add({id:p.id,name:p.name,variant:v[0],price:v[1],bulk:!!v[2],note:inp.value.trim(),qty:1});inp.value=''};
+ document.getElementById(p.g==='o'?'gridOstalo':'gridLeto').appendChild(c);
+});
+var lc=document.createElement('a');lc.className='card';lc.href='vreca-za-spavanje.html';
+lc.innerHTML='<div class="media"><img src="img/clouds.jpg" alt="Letnja muslin vreća" loading="lazy"></div><div class="body"><div><h3>Letnje muslin vreće</h3><small>jedan sloj organskog muslina · po meri</small></div><span class="price">od 3.200 RSD</span></div>';
+document.getElementById('gridLeto').appendChild(lc);
+</script>
 </body></html>

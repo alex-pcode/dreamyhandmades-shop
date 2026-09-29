@@ -72,11 +72,41 @@ table{width:100%;border-collapse:collapse;font-size:14px;margin-top:6px}th,td{te
 .toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,30px);opacity:0;background:var(--plum);color:#fff;padding:14px 20px;border-radius:16px;font-weight:700;font-size:14px;transition:.3s;z-index:90;max-width:90vw}.toast.show{opacity:1;transform:translate(-50%,0)}
 @media(max-width:1024px){.product{grid-template-columns:1fr;gap:34px}.gallery{position:static}.strip{grid-template-columns:1fr 1fr}}
 @media(max-width:560px){.gallery{grid-template-columns:1fr}.thumbs{flex-direction:row;order:2;overflow-x:auto;max-height:none}.thumbs button{flex:0 0 64px}.types{grid-template-columns:1fr}}
+
+/* cart */
+.cart-btn{position:relative;gap:.4em}.cart-btn .cnt{background:#fff;color:var(--pink-d);border-radius:999px;min-width:22px;height:22px;padding:0 6px;display:inline-grid;place-items:center;font-size:12px;font-weight:800}
+.cart-btn .cnt.bump{animation:bump .25s}@keyframes bump{50%{transform:scale(1.35)}}
+.ov{position:fixed;inset:0;background:rgba(59,26,51,.45);opacity:0;pointer-events:none;transition:opacity .25s;z-index:80}.ov.open{opacity:1;pointer-events:auto}
+.drawer{position:fixed;top:0;right:0;bottom:0;width:min(440px,100vw);background:var(--blush);z-index:85;transform:translateX(100%);transition:transform .3s;display:flex;flex-direction:column;box-shadow:-20px 0 50px -20px rgba(59,26,51,.4)}.drawer.open{transform:none}
+.dh{display:flex;justify-content:space-between;align-items:center;padding:18px 22px;border-bottom:1.5px solid var(--line);background:#fff}.dh b{font-family:"Fredoka";font-size:22px}
+.dh button{border:0;background:var(--soft);width:36px;height:36px;border-radius:50%;font-size:22px;line-height:1;color:var(--plum)}
+.dbody{flex:1;overflow:auto;padding:18px 22px 26px}
+.dempty{text-align:center;padding:50px 10px;color:var(--plum-2)}.dempty .btn{margin-top:18px}
+.cl{display:grid;grid-template-columns:1fr auto;gap:6px 12px;background:#fff;border:1.5px solid var(--line);border-radius:18px;padding:14px;margin-bottom:12px}
+.cl b{font-family:"Fredoka";font-size:16px}.cl .v{font-size:13px;color:var(--plum-2)}.cl .v div{margin-top:2px}
+.cl .lp{font-weight:800;color:var(--pink-d);white-space:nowrap;text-align:right}.cl .lp small{display:block;font-weight:700;color:#4c7a45;font-size:11px}
+.qty{display:inline-flex;align-items:center;border:1.5px solid var(--line);border-radius:999px;overflow:hidden;background:#fff}
+.qty button{border:0;background:transparent;width:32px;height:32px;font-size:18px;color:var(--plum)}.qty span{min-width:26px;text-align:center;font-weight:800;font-size:14px}
+.rm{border:0;background:none;color:var(--plum-2);font-size:12px;text-decoration:underline;justify-self:end}
+.dtot{display:flex;justify-content:space-between;font-family:"Fredoka";font-size:20px;margin:18px 0 6px}.dtot span:last-child{color:var(--pink-d)}
+.dnote{font-size:13px;color:var(--plum-2);margin:6px 0 14px}
+.help{font-size:12.5px;color:var(--plum-2);margin-top:14px;text-align:center}.help a{color:var(--pink-d);font-weight:800;text-decoration:underline}
+.dbody .btn{width:100%}
+.fld{display:block;margin-bottom:12px}.fld span{display:block;font-size:13px;font-weight:800;margin-bottom:5px}
+.fld input,.fld textarea{width:100%;padding:12px 14px;border-radius:14px;border:2px solid var(--line);font:inherit;background:#fff;color:var(--plum)}.fld input:focus,.fld textarea:focus{outline:0;border-color:var(--pink)}
+.pay{display:flex;gap:10px;align-items:center;background:var(--soft);border:2px solid var(--pink);border-radius:14px;padding:12px 14px;font-weight:700;font-size:14px;margin-bottom:12px}.pay input{accent-color:var(--pink)}
+.back{border:0;background:none;color:var(--plum-2);font-weight:700;margin-bottom:12px;font-size:14px}
+.done{text-align:center}.done .big{font-size:52px}.done h2{font-size:28px;margin:8px 0 6px}.done .ono{display:inline-block;background:var(--soft);color:var(--pink-d);font-weight:800;border-radius:999px;padding:6px 14px;margin:8px 0 16px;font-size:14px}
+.done .box{text-align:left;background:#fff;border:1.5px solid var(--line);border-radius:18px;padding:14px;font-size:14px;margin:14px 0}.done .box div{margin:3px 0}
+.mini{display:flex;justify-content:space-between;gap:10px;font-size:13px;margin:3px 0}
+.toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,30px);opacity:0;background:var(--plum);color:#fff;padding:14px 20px;border-radius:16px;font-weight:700;font-size:14px;transition:.3s;z-index:95;max-width:90vw;pointer-events:none}.toast.show{opacity:1;transform:translate(-50%,0)}
+
+.qrow{display:flex;gap:12px;align-items:center;margin-top:14px}.qrow input{width:80px;padding:12px;border-radius:14px;border:2px solid var(--line);font:inherit;font-weight:800;color:var(--plum);background:#fff;text-align:center}.pnote{width:100%;padding:12px 14px;border-radius:14px;border:2px solid var(--line);font:inherit;background:#fff;color:var(--plum)}
 </style></head><body>
 <div class="announce">Ručno rađeno · šije se po meri vašeg mališana 🌙</div>
 <header class="site"><div class="wrap"><a class="logo" href="index.html"><img src="img/logo.jpg" alt="Dreamy Handmades logo">dreamy handmades</a>
 <nav class="main"><a class="active" href="vreca-za-spavanje.html">Vreće za spavanje</a><a href="index.html#ostalo">Za bebe i krevetac</a><a href="index.html#leto">Na plažu</a><a href="index.html#utisci">Utisci</a></nav>
-<a class="btn btn-pink hdr-cta" href="https://ig.me/m/dreamy_handmades_" target="_blank" rel="noopener">Pišite nam 💌</a></div></header>
+<button class="btn btn-pink hdr-cta cart-btn" id="cartBtn" type="button">Korpa <span class="cnt" id="cartCount">0</span></button></div></header>
 <main><div class="wrap">
 <nav class="crumbs"><a href="index.html">Početna</a><span>/</span>Vreće za spavanje</nav>
 <div class="product">
@@ -84,7 +114,7 @@ table{width:100%;border-collapse:collapse;font-size:14px;margin-top:6px}th,td{te
  <div class="info">
   <span class="eyebrow">Šije se po meri · ručni rad</span>
   <h1>Dreamy vreća <span class="script">za spavanje</span></h1>
-  <div class="pricebox"><span class="now">Cena po meri</span><span class="note">U ponudi primeri od 3.300 do 4.500 RSD, zavisi od modela, debljine i dužine</span></div>
+  <div class="pricebox"><span class="now" id="price">3.500 RSD</span><span class="note">Cena zavisi od izabrane debljine, dužine i dodataka</span></div>
   <p class="intro">Beba je uvek ušuškana, bez rizika da se otkrije i prehladi, a mama je spokojna i odmornija jer ima jednu brigu manje.</p>
 
   <div class="opt"><div class="opt-head">Debljina: <span id="tName"></span></div><div class="types" id="types"></div><div class="tdesc" id="tDesc"></div></div>
@@ -93,25 +123,27 @@ table{width:100%;border-collapse:collapse;font-size:14px;margin-top:6px}th,td{te
    <button type="button" class="model on" data-v="džak">Džak<small>klasičan</small></button>
    <button type="button" class="model" data-v="sa plićim nogavicama">Nogavice<small>plitke</small></button>
    <button type="button" class="model" data-v="hibridni (džak sa nogavicama)">Hibrid<small>širok kroj</small></button></div>
-   <label class="chk"><input type="checkbox" id="sleeves"> <span><b>Rukavi na skidanje</b> (moguće na zahtev)</span></label>
-   <label class="chk"><input type="checkbox" id="socks"> <span><b>Ranfle-čarapice</b> (moguće na zahtev)</span></label></div>
+   <label class="chk"><input type="checkbox" id="sleeves"> <span><b>Rukavi na skidanje</b> (+ 800 RSD)</span></label>
+   <label class="chk"><input type="checkbox" id="socks"> <span><b>Ranfle-čarapice</b> (+ 200 RSD)</span></label></div>
 
   <div class="opt"><div class="opt-head">Visina deteta <span>(od ramena do stopala)</span></div><div class="len"><input id="len" inputmode="numeric" placeholder="npr. 65"><span>cm · vreće se ne šiju u konfekcijskim veličinama</span></div></div>
 
   <div class="opt"><div class="opt-head">Dezen</div><input class="pattern" id="pat" placeholder="Npr. medvedi, jedrilice, cveće, jednobojna…"></div>
+  <div class="opt"><div class="opt-head">Napomena <span>(opciono)</span></div><input class="pnote" id="nap" maxlength="160" placeholder="Boje, posebne želje…"></div>
 
   <div class="sum" id="sum"></div>
-  <div class="buy"><button class="btn btn-pink" id="send" type="button">Pošalji upit na Instagram 💌</button>
+  <div class="qrow"><span style="font-weight:800;font-size:14px">Količina</span><input id="qty" type="number" min="1" max="20" value="1" aria-label="Količina"></div>
+  <div class="buy"><button class="btn btn-pink" id="send" type="button">Dodaj u korpu</button>
    <a class="btn btn-ghost" href="index.html#utisci">Pročitaj utiske mama</a></div>
-  <p style="font-size:12px;color:var(--plum-2);margin-top:8px">Kopira poruku i otvara inbox @dreamy_handmades_. Tačnu cenu dobijate u odgovoru.</p>
+  <p style="font-size:12px;color:var(--plum-2);margin-top:8px">Plaćanje pouzećem. Pitanja? Pišite nam na Instagramu <a href="https://www.instagram.com/dreamy_handmades_/" target="_blank" rel="noopener" style="color:var(--pink-d);font-weight:800;text-decoration:underline">@dreamy_handmades_</a>.</p>
 
   <div class="perks"><div class="perk"><span>🌿</span>Pamuk, muslin, vafl, frotir</div><div class="perk"><span>✂️</span>Po meri deteta</div><div class="perk"><span>🎨</span>Dezen po želji</div></div>
 
   <div class="acc">
    <details open><summary>Opis</summary><div class="inner"><p>Klasični džakovi drže bebu ušuškanom i toplom, baš onako kako je navikla da se oseća u maminom stomaku, i mogu se sešiti u dužinama do 170 cm. Model sa nogavicama daje slobodu pokreta, a spušten međunožni deo ostavlja dovoljno mesta za pelene. Hibridni kroj je negde između džaka i jednodelne pidžame, komotan za najnemirnije spavače.</p></div></details>
-   <details><summary>Kako do tačne cene</summary><div class="inner"><ul><li>izaberite model (džak ili sa nogavicama, sa rukavima ili bez)</li><li>izaberite debljinu</li><li>javite visinu deteta merenu baš od ramena do stopala; prema toj meri se šije duža i komotnija vreća</li></ul></div></details>
-   <details><summary>Primeri cena iz ponude</summary><div class="inner"><table><thead><tr><th>Vreća</th><th>Dužina</th><th>Cena</th></tr></thead><tbody><tr><td>Flanel vreća, novorođenče (do 3. meseca)</td><td>70 cm</td><td><b>3.300 RSD</b></td></tr><tr><td>Vafl vreća (proleće–jesen)</td><td>80 cm</td><td><b>3.500 RSD</b></td></tr><tr><td>Frotirna vreća (zimska)</td><td>65 cm plus ranfla</td><td><b>3.500 RSD</b></td></tr><tr><td>Flanel vreća (prolećna) sa nogavicama</td><td>75 cm plus ranfla</td><td><b>3.500 RSD</b></td></tr><tr><td>Flanel vreća sa produženim kopčanjem</td><td>85 cm</td><td><b>3.700 RSD</b></td></tr><tr><td>Vafl vreća sa rukavima na skidanje</td><td>65 cm plus ranfla</td><td><b>4.300 RSD</b></td></tr><tr><td>Vafl vreća sa rukavima i ranfla-čarapicom</td><td>65 cm</td><td><b>4.500 RSD</b></td></tr><tr><td>Vafl vreća sa rukavima na skidanje</td><td>100 cm</td><td><b>4.500 RSD</b></td></tr></tbody></table><p style="margin-top:10px;font-size:13px">Ovo su cene gotovih vreća sa profila brenda i služe kao orijentir; cena vaše vreće zavisi od izabranog modela, debljine i dužine.</p></div></details>
-   <details><summary>Nega, isporuka i rok izrade</summary><div class="inner"><p>Informacije o nezi, roku izrade i isporuci brend će potvrditi u razgovoru. Pišite nam u inbox.</p></div></details>
+   <details><summary>Kako izmeriti dete</summary><div class="inner"><ul><li>izmerite visinu deteta baš od ramena do stopala; prema toj meri se šije duža i komotnija vreća</li><li>upišite tu meru u cm, a dužina vreće određuje cenu</li></ul></div></details>
+   <details><summary>Cene gotovih vreća sa profila</summary><div class="inner"><table><thead><tr><th>Vreća</th><th>Dužina</th><th>Cena</th></tr></thead><tbody><tr><td>Flanel vreća, novorođenče (do 3. meseca)</td><td>70 cm</td><td><b>3.300 RSD</b></td></tr><tr><td>Vafl vreća (proleće–jesen)</td><td>80 cm</td><td><b>3.500 RSD</b></td></tr><tr><td>Frotirna vreća (zimska)</td><td>65 cm plus ranfla</td><td><b>3.500 RSD</b></td></tr><tr><td>Flanel vreća (prolećna) sa nogavicama</td><td>75 cm plus ranfla</td><td><b>3.500 RSD</b></td></tr><tr><td>Flanel vreća sa produženim kopčanjem</td><td>85 cm</td><td><b>3.700 RSD</b></td></tr><tr><td>Vafl vreća sa rukavima na skidanje</td><td>65 cm plus ranfla</td><td><b>4.300 RSD</b></td></tr><tr><td>Vafl vreća sa rukavima i ranfla-čarapicom</td><td>65 cm</td><td><b>4.500 RSD</b></td></tr><tr><td>Vafl vreća sa rukavima na skidanje</td><td>100 cm</td><td><b>4.500 RSD</b></td></tr></tbody></table><p style="margin-top:10px;font-size:13px">Ovo su cene gotovih vreća koje je brend objavio na profilu.</p></div></details>
+   <details><summary>Plaćanje i isporuka</summary><div class="inner"><p>Plaćanje je pouzećem. Vreća se šije po meri nakon porudžbine, a o roku izrade i isporuci javljamo vam se čim primimo porudžbinu.</p></div></details>
   </div>
  </div>
 </div>
@@ -122,8 +154,91 @@ table{width:100%;border-collapse:collapse;font-size:14px;margin-top:6px}th,td{te
 </div></main>
 <footer><div class="wrap"><div><b style="color:#fff;font-family:Fredoka">dreamy handmades</b><br>Kod nas ćete pronaći miran san 👶🏻</div>
 <div><a href="https://www.instagram.com/dreamy_handmades_/" target="_blank" rel="noopener">Instagram @dreamy_handmades_</a></div>
-<p class="mock">Nezvanični mockup prodavnice, napravljen na osnovu Instagram profila brenda. Cene i opisi potiču sa profila.</p></div></footer>
+<p class="mock">Nezvanični mockup prodavnice, napravljen na osnovu Instagram profila brenda. Cene i opisi potiču sa profila; cene vreća za spavanje su okvirne (procena).</p></div></footer>
+<div class="ov" id="ov"></div>
+<aside class="drawer" id="drawer" aria-hidden="true" role="dialog" aria-label="Korpa"><div class="dh"><b id="dTitle">Korpa</b><button id="dClose" type="button" aria-label="Zatvori">×</button></div><div class="dbody" id="dBody"></div></aside>
 <div class="toast" id="toast"></div>
+<script>
+(function(){
+var KEY='dh_cart_v1',IG='https://www.instagram.com/dreamy_handmades_/',cart=[],view='cart';
+try{cart=JSON.parse(localStorage.getItem(KEY)||'[]')}catch(e){cart=[]}
+if(!Array.isArray(cart))cart=[];
+function save(){try{localStorage.setItem(KEY,JSON.stringify(cart))}catch(e){}}
+function fmt(n){return String(Math.round(n)).replace(/\B(?=(\d{3})+(?!\d))/g,'.')+' RSD'}
+function el(t,c,x){var e=document.createElement(t);if(c)e.className=c;if(x!=null)e.textContent=x;return e}
+function freeOf(l){return l.bulk?Math.floor(l.qty/6):0}
+function lineTotal(l){return l.price*(l.qty-freeOf(l))}
+function total(){return cart.reduce(function(s,l){return s+lineTotal(l)},0)}
+function count(){return cart.reduce(function(s,l){return s+l.qty},0)}
+var drawer=document.getElementById('drawer'),ov=document.getElementById('ov'),body=document.getElementById('dBody'),title=document.getElementById('dTitle'),cnt=document.getElementById('cartCount');
+function toast(m){var t=document.getElementById('toast');t.textContent=m;t.classList.add('show');setTimeout(function(){t.classList.remove('show')},3000)}
+function badge(bump){cnt.textContent=count();if(bump){cnt.classList.remove('bump');void cnt.offsetWidth;cnt.classList.add('bump')}}
+function open(v){view=v||'cart';drawer.classList.add('open');ov.classList.add('open');drawer.setAttribute('aria-hidden','false');render()}
+function close(){drawer.classList.remove('open');ov.classList.remove('open');drawer.setAttribute('aria-hidden','true')}
+function helpNote(){var p=el('p','help','Pitanja? Pišite nam na Instagramu ');var a=el('a',null,'@dreamy_handmades_');a.href=IG;a.target='_blank';a.rel='noopener';p.appendChild(a);return p}
+function render(){
+ body.innerHTML='';badge(false);
+ if(view==='cart')renderCart();else if(view==='checkout')renderCheckout();
+}
+function renderCart(){
+ title.textContent='Korpa';
+ if(!cart.length){var e=el('div','dempty');e.appendChild(el('div',null,'Korpa je prazna. Izaberite nešto lepo za mališane.'));var b=el('button','btn btn-pink','Nastavi kupovinu');b.type='button';b.onclick=close;e.appendChild(b);body.appendChild(e);body.appendChild(helpNote());return}
+ cart.forEach(function(l,i){
+  var d=el('div','cl'),left=el('div');left.appendChild(el('b',null,l.name));
+  var v=el('div','v');if(l.variant)v.appendChild(el('div',null,l.variant));(l.opts||[]).forEach(function(o){v.appendChild(el('div',null,o))});if(l.note)v.appendChild(el('div',null,'Napomena: '+l.note));
+  left.appendChild(v);d.appendChild(left);
+  var lp=el('div','lp',fmt(lineTotal(l)));if(freeOf(l))lp.appendChild(el('small',null,'šesta gratis: '+freeOf(l)+' kom'));d.appendChild(lp);
+  var q=el('div','qty'),m=el('button',null,'−'),p=el('button',null,'+');m.type=p.type='button';m.setAttribute('aria-label','Manje');p.setAttribute('aria-label','Više');
+  m.onclick=function(){l.qty--;if(l.qty<1)cart.splice(i,1);save();render()};p.onclick=function(){l.qty++;save();render()};
+  q.appendChild(m);q.appendChild(el('span',null,l.qty));q.appendChild(p);d.appendChild(q);
+  var r=el('button','rm','Ukloni');r.type='button';r.onclick=function(){cart.splice(i,1);save();render()};d.appendChild(r);
+  body.appendChild(d)});
+ var t=el('div','dtot');t.appendChild(el('span',null,'Ukupno'));t.appendChild(el('span',null,fmt(total())));body.appendChild(t);
+ body.appendChild(el('p','dnote','Plaćanje pouzećem, prilikom preuzimanja pošiljke.'));
+ var go=el('button','btn btn-pink','Nastavi na porudžbinu');go.type='button';go.onclick=function(){view='checkout';render()};body.appendChild(go);
+ var more=el('button','btn btn-ghost','Nastavi kupovinu');more.type='button';more.style.marginTop='10px';more.onclick=close;body.appendChild(more);
+ body.appendChild(helpNote());
+}
+function renderCheckout(){
+ title.textContent='Podaci za porudžbinu';
+ var bk=el('button','back','← Nazad u korpu');bk.type='button';bk.onclick=function(){view='cart';render()};body.appendChild(bk);
+ var f=document.createElement('form');
+ f.innerHTML='<label class="fld"><span>Ime i prezime</span><input name="ime" required autocomplete="name"></label>'
+ +'<label class="fld"><span>Adresa (ulica i broj)</span><input name="adresa" required autocomplete="street-address"></label>'
+ +'<label class="fld"><span>Grad i poštanski broj</span><input name="grad" required autocomplete="address-level2"></label>'
+ +'<label class="fld"><span>Telefon</span><input name="tel" type="tel" required autocomplete="tel" pattern="[0-9+ /()-]{6,}"></label>'
+ +'<label class="fld"><span>E-mail</span><input name="mail" type="email" required autocomplete="email"></label>'
+ +'<label class="fld"><span>Napomena / personalizacija (opciono)</span><textarea name="nap" rows="3"></textarea></label>'
+ +'<div class="pay"><input type="radio" checked disabled> Plaćanje pouzećem</div>';
+ var sm=el('div');cart.forEach(function(l){var r=el('div','mini');r.appendChild(el('span',null,l.qty+' × '+l.name+(l.variant?' ('+l.variant+')':'')));r.appendChild(el('span',null,fmt(lineTotal(l))));sm.appendChild(r)});f.appendChild(sm);
+ var t=el('div','dtot');t.appendChild(el('span',null,'Ukupno'));t.appendChild(el('span',null,fmt(total())));f.appendChild(t);
+ var s=el('button','btn btn-pink','Potvrdi porudžbinu');s.type='submit';f.appendChild(s);f.appendChild(helpNote());
+ f.onsubmit=function(e){e.preventDefault();var fd=new FormData(f);
+  var o={no:'DH-'+Math.floor(1000+Math.random()*9000),items:cart.slice(),total:total(),ime:fd.get('ime'),adresa:fd.get('adresa'),grad:fd.get('grad'),tel:fd.get('tel'),mail:fd.get('mail')};
+  cart=[];save();badge(false);renderDone(o)};
+ body.appendChild(f);
+}
+function renderDone(o){
+ view='done';body.innerHTML='';title.textContent='Porudžbina';body.scrollTop=0;
+ var d=el('div','done');d.appendChild(el('div','big','💌'));d.appendChild(el('h2',null,'Hvala, porudžbina je primljena'));
+ d.appendChild(el('p',null,'Broj porudžbine:'));d.appendChild(el('div','ono',o.no));
+ var bx=el('div','box');o.items.forEach(function(l){var r=el('div',null,l.qty+' × '+l.name+(l.variant?' ('+l.variant+')':'')+((l.opts&&l.opts.length)?' · '+l.opts.join(', '):'')+(l.note?' · '+l.note:'')+' — '+fmt(lineTotal(l)));bx.appendChild(r)});
+ var tt=el('div',null,'Ukupno: '+fmt(o.total));tt.style.fontWeight='800';bx.appendChild(tt);
+ bx.appendChild(el('div',null,'Isporuka: '+o.ime+', '+o.adresa+', '+o.grad));bx.appendChild(el('div',null,'Kontakt: '+o.tel+' · '+o.mail));bx.appendChild(el('div',null,'Plaćanje pouzećem'));
+ d.appendChild(bx);d.appendChild(el('p','dnote','Javićemo vam se radi potvrde porudžbine i dogovora o isporuci.'));
+ var b=el('button','btn btn-pink','Nazad u prodavnicu');b.type='button';b.onclick=close;d.appendChild(b);d.appendChild(helpNote());body.appendChild(d);
+}
+window.DH={fmt:fmt,toast:toast,open:open,
+ add:function(it){var key=[it.id,it.variant||'',(it.opts||[]).join('|'),it.note||''].join('§');
+  var f=cart.filter(function(l){return l.key===key})[0];
+  if(f)f.qty+=it.qty||1;else cart.push({key:key,id:it.id,name:it.name,variant:it.variant||'',opts:it.opts||[],note:it.note||'',price:it.price,qty:it.qty||1,bulk:!!it.bulk});
+  save();badge(true);open('cart')}};
+document.getElementById('cartBtn').onclick=function(){open('cart')};
+document.getElementById('dClose').onclick=close;ov.onclick=close;
+document.addEventListener('keydown',function(e){if(e.key==='Escape')close()});
+badge(false);
+})();
+</script>
 <script>
 var G=[{"s": "img/bears.jpg", "a": "Vreća sa nogavicama, medvedi"}, {"s": "img/bears2.jpg", "a": "Detalj: rajsferšlus i manžetne"}, {"s": "img/flowers.jpg", "a": "Cvetni dezen sa roze manžetnama"}, {"s": "img/sail.jpg", "a": "Džak sa jedrilicama"}, {"s": "img/clouds.jpg", "a": "Letnja muslin vreća"}, {"s": "img/hybrid.jpg", "a": "Hibridni model sa plićim nogavicama"}, {"s": "img/sleeves.jpg", "a": "Vafl vreća sa rukavima na skidanje"}, {"s": "img/waffle.jpg", "a": "Vafl vreća"}, {"s": "img/frotir.jpg", "a": "Frotirna vreća"}, {"s": "img/flanel.jpg", "a": "Flanel vreća sa nogavicama"}],T=[{"k": "frotir-flanel", "n": "Frotir-flanel", "s": "zimska", "t": "17–18 °C", "d": "Najtoplija: puni frotir iznutra i flanel, toplo i meko pamučno platno spolja. Mekana, debela zimska vreća."}, {"k": "frotir", "n": "Frotirna", "s": "zimska", "t": "19–20 °C", "d": "Frotir iznutra je puniji, topao, mekan i 100% pamučan; spolja posteljni pamuk u dezenu koji birate."}, {"k": "vafl", "n": "Vafl", "s": "proleće–jesen", "t": "21–23 °C", "d": "Iznutra vafl, 100% pamučno platno prepoznatljivo po četvrtastom radu. Bira se i zimi za sobe koje su bolje zagrejane."}, {"k": "flanel", "n": "Flanel-pamuk", "s": "prolećna", "t": "24–25 °C", "d": "Flanel je meko, nežno pamučno platno blago čupkave površine koje greje iako nije debelo."}, {"k": "dvoslojna", "n": "Dvoslojna pamučna", "s": "proleće–leto", "t": "tanka", "d": "Dva sloja tankog posteljnog pamuka: beo iznutra, dezen po želji spolja. Lagana vreća za proleće i leto."}, {"k": "jednoslojna", "n": "Jednoslojna pamučna", "s": "letnja", "t": "najtoplije noći", "d": "Jedan sloj tankog, „hladnog“ 100% pamučnog platna, u dezenu po želji."}, {"k": "muslin", "n": "Jednoslojna muslin", "s": "letnja", "t": "najtananija", "d": "Jedan sloj 100% organskog pamuka muslina, tanak i prozračan; koža diše kroz njega. Tanja i od jednoslojnih pamučnih."}];
 var th=document.getElementById('thumbs'),stage=document.getElementById('stage');
@@ -134,13 +249,22 @@ var ty=document.getElementById('types');
 T.forEach(function(t,i){var b=document.createElement('button');b.type='button';b.className='type';b.innerHTML='<b>'+t.n+'</b><small>'+t.s+' · '+t.t+'</small>';b.onclick=function(){state.t=i;render()};ty.appendChild(b)});
 [].forEach.call(document.querySelectorAll('.model'),function(b){b.onclick=function(){state.m=b.dataset.v;[].forEach.call(document.querySelectorAll('.model'),function(x){x.classList.toggle('on',x===b)});render()}});
 ['sleeves','socks','len','pat'].forEach(function(id){document.getElementById(id).addEventListener('input',render)});
-function msg(){var t=T[state.t],l=document.getElementById('len').value.trim(),p=document.getElementById('pat').value.trim();
- return 'Zdravo! Zanima me vreća za spavanje: debljina '+t.n+' ('+t.s+'), model: '+state.m+(document.getElementById('sleeves').checked?', sa rukavima':'')+(document.getElementById('socks').checked?', sa ranfla-čarapicama':'')+', visina deteta od ramena do stopala: '+(l?l+' cm':'(javiću)')+', dezen: '+(p||'(javiću)')+'. Koja je cena?'}
+var BASE={'frotir-flanel':3900,'frotir':3500,'vafl':3500,'flanel':3300,'dvoslojna':3200,'jednoslojna':3000,'muslin':3200};
+function lenAdd(l){return !l||l<=70?0:l<=90?200:l<=110?500:l<=140?900:1400}
+function calc(){var t=T[state.t],l=parseInt(document.getElementById('len').value,10)||0;
+ return BASE[t.k]+lenAdd(l)+(document.getElementById('sleeves').checked?800:0)+(document.getElementById('socks').checked?200:0)}
+function opts(){var l=document.getElementById('len').value.trim(),p=document.getElementById('pat').value.trim(),o=['Model: '+state.m];
+ if(document.getElementById('sleeves').checked)o.push('Rukavi na skidanje');if(document.getElementById('socks').checked)o.push('Ranfle-čarapice');
+ o.push('Visina deteta (rame–stopalo): '+(l?l+' cm':'-'));o.push('Dezen: '+(p||'-'));return o}
 function render(){var t=T[state.t];[].forEach.call(ty.children,function(c,i){c.classList.toggle('on',i===state.t)});
  document.getElementById('tName').textContent=t.n;document.getElementById('tDesc').textContent=t.d;
- document.getElementById('sum').innerHTML='<b>Vaš upit:</b><br>'+msg()}
+ document.getElementById('price').textContent=DH.fmt(calc());
+ document.getElementById('sum').innerHTML='<b>Vaš izbor:</b><br>'+t.n+' ('+t.s+'), '+opts().slice(0,1).join('').replace('Model: ','model: ')+(document.getElementById('sleeves').checked?', sa rukavima':'')+(document.getElementById('socks').checked?', sa ranfle-čarapicama':'')+' · <b>'+DH.fmt(calc())+'</b>'}
 render();
-document.getElementById('send').onclick=function(){var m=msg();var done=function(){var to=document.getElementById('toast');to.textContent='Poruka je kopirana. Nalepite je u inbox.';to.classList.add('show');setTimeout(function(){to.classList.remove('show')},3500);window.open('https://ig.me/m/dreamy_handmades_','_blank')};
- try{navigator.clipboard.writeText(m).then(done,done)}catch(e){done()}};
+document.getElementById('send').onclick=function(){
+ var l=parseInt(document.getElementById('len').value,10),p=document.getElementById('pat').value.trim(),q=Math.max(1,Math.min(20,parseInt(document.getElementById('qty').value,10)||1));
+ if(!(l>=40&&l<=170)){DH.toast('Upišite visinu deteta u cm (40–170).');document.getElementById('len').focus();return}
+ if(!p){DH.toast('Upišite dezen koji želite.');document.getElementById('pat').focus();return}
+ var t=T[state.t];DH.add({id:'vreca-'+t.k,name:'Vreća za spavanje',variant:t.n+' ('+t.s+')',opts:opts(),note:document.getElementById('nap').value.trim(),price:calc(),qty:q})};
 </script>
 </body></html>
